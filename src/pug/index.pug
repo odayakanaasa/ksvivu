@@ -1,0 +1,130 @@
+- var page = { id :"index" };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_mixins.pug
+    include includes/_meta.pug
+    include includes/_includes.pug
+  body
+    include includes/_nav.pug
+    #barba-wrapper: .barba-container: .wrap.-index-first
+      .row.-index-second
+        .col-md-6.col-xl-7
+          .row.-index-third.px-0.pb-3
+            .col-xl-7.p-3.-index-left.text-font-mpc
+              .container.py-3
+                h1.-index-title
+                  span.-index-school 群馬県立高崎高等学校 文化祭
+                  br
+                  | #{site.title}
+                br
+                span.-index-theme
+                  span.-index-tema テーマ&nbsp;
+                  | #{site.theme}
+                br
+                span.-index-themeinjp 『#{site.themeinjp}』
+                .-index-cntdwn.mt-5 開幕まで&ensp;<span class="-index-timer"></span>
+                p.-index-date
+                  span.-index-date-y 2017年&nbsp;
+                  span.-index-date-m 6月
+                  span.-index-date-day1num 3日
+                  span.-index-date-day1Sat (土)
+                  span.-index-date-day1start 12:00～
+                  br
+                  span.-index-date-day2num 4日
+                  span.-index-date-day2Sun (日)
+                  span.-index-date-day2start &ensp;&thinsp;9:00～
+                  br
+                  span 閉場 16:30(両日)
+            .col-xl-5.pt-xl-5
+              .-index-middle.align-left: .container
+                .alert.alert-danger(role="alert").-index-onposter
+                  h5.my-2
+                    +fa("ban")
+                    | 高チャリでのご来場はご遠慮ください
+                  p.mb-2 高崎高校は高チャリ利用エリア外です。
+                .alert.alert-info(role="alert").-index-onposter
+                  h5.my-2
+                    +fa("info-circle")
+                    | 校内展示Web上人気投票&amp;アンケートを実施します
+                  p.mb-2
+                    | Web上で一般展示の人気投票を行います。玄関で行われるシール式投票と併せて奮ってご参加ください。
+                  h6.mb-1.text-success Web上展示投票受付時間帯
+                  p.mb-2
+                    span.text-success <b>1日目:</b>&nbsp;3日12:00～4日9:00
+                    br
+                    span.text-success <b>2日目:</b>&nbsp;4日&ensp;&thinsp;9:00～5日9:00
+                  p.mb-2
+                    | これ以降もアンケートを実施します。ご意見・ご感想をお寄せください。
+                  a.btn.btn-success.btn-block.btn-large.disabled.mb-2(href="javascript:void(0)") <b>Web上投票&amp;アンケートへ</b>
+                .list-group.-index-onposter
+                  .list-group-item
+                    h3.my-1 更新情報
+                  - for( var i in site.updates ) {
+                  -   var printableDate = printDate(site.updates[i].date)
+                  -   if( i == 0 ){
+                    if site.updates[i].link
+                      a(href=site.updates[i].link).list-group-item.list-group-item-action.active
+                        +updatearticle(i)
+                    else
+                      .list-group-item.active
+                        +updatearticle(i)
+                  -   } else if ( i == 5 && site.updates.length > 5 ) {
+                    a(href="javascript:void(0);").list-group-item.list-group-item-action
+                      b もっと見る
+                    if site.updates[i].link
+                      a(href=site.updates[i].link).list-group-item.list-group-item-action
+                        +updatearticle(i)
+                    else
+                      .list-group-item
+                        +updatearticle(i)
+                  -   } else {
+                    if site.updates[i].link
+                      a(href=site.updates[i].link).list-group-item.list-group-item-action
+                        +updatearticle(i)
+                    else
+                      .list-group-item
+                        +updatearticle(i)
+                  -   }
+                  - }
+                  if ( site.updates.length > 5 )
+                    a(href="javascript:void(0);").list-group-item.list-group-item-action
+                      b 隠す
+        .col-md-6.col-xl-5.px-0
+          .-index-right.px-3.py-3.py-md-4.d-flex.flex-wrap
+            a(href="/notices").Attention.py-2.px-3
+              .-index-pickups-wrap.rounded.Attention
+                .container.w-100.my-auto
+                  .-index-pickups.Attention
+                    .-index-pickups-head ご注意･ご案内
+                    .-index-pickups-desc ご来場前にご一読ください
+            a(href="/access").Bus.py-2.px-3
+              .-index-pickups-wrap.rounded.Bus
+                .container.w-100.my-auto
+                  .-index-pickups.Bus
+                    .-index-pickups-head アクセス
+                    .-index-pickups-desc 高崎駅から無料シャトルバスを運行します！
+            a(href="/pantene").no-barba.Pantene.py-2.px-3
+              .-index-pickups-wrap.rounded.Pantene
+                .container.w-100.my-auto
+                  .-index-pickups.Pantene
+                    .-index-pickups-head 一般展示
+                    .-index-pickups-desc 今回最も力を入れた校内の展示
+            a(href="/food?tab=stall").Food.py-2.px-3
+              .-index-pickups-wrap.rounded.Food
+                .container.w-100.my-auto
+                  .-index-pickups.Food
+                    .-index-pickups-head 食べ物･飲み物
+                    .-index-pickups-desc 模擬店、食堂、喫茶店で美味しいものを食べる
+            a(href="/events?tab=stage").Events.py-2.px-3
+              .-index-pickups-wrap.rounded.Events
+                .container.w-100.my-auto
+                  .-index-pickups.Events
+                    .-index-pickups-head イベントステージ
+            a(href="/events?tab=gym").Gym.py-2.px-3
+              .-index-pickups-wrap.rounded.Gym
+                .container.w-100.my-auto
+                  .-index-pickups.Gym
+                    .-index-pickups-head 体育館行事
+    include includes/_footer.pug

@@ -1,0 +1,255 @@
+{
+    "site" : {
+        "title" : "第65回翠巒祭",
+        "theme" : "No SurFace",
+        "themeinjp" : "おもてなし",
+        "domain" : "suiranfes.com",
+        "FesURL" : "https://suiranfes.com/",
+        "URL" : "https://2017.suiranfes.com/",
+        "CDN" : "https://2017.suiranfes.com/files/",
+        "sitecardpath" : "assets/img/TwitterCard7.png",
+        "iconpath" : "assets/img/X-SUIRAN-t-600-f-fs8.png",
+        "sharetext" : {
+            "line" : "%0D%0A~~~~~~~~~~~~~~~~~~~~~~~~%0D%0A%E3%80%90%E7%BF%A0%E5%B7%92%E7%A5%AD%28%E3%82%B9%E3%82%A4%E3%83%A9%E3%83%B3%E7%A5%AD%29%E3%80%91%0D%0A%E3%80%80%E7%BE%A4%E9%A6%AC%E7%9C%8C%E7%AB%8B%E9%AB%98%E5%B4%8E%E9%AB%98%E6%A0%A1%EF%BC%88%E9%AB%98%E9%AB%98%EF%BC%89%E3%81%AE%E6%96%87%E5%8C%96%E7%A5%AD%0D%0A%0D%0A%E3%80%80%E6%AC%A1%E5%9B%9E%3A%E7%AC%AC65%E5%9B%9E%0D%0A%E3%80%802017%E5%B9%B4%206%E6%9C%883%E6%97%A5%E3%83%BB6%E6%9C%884%E6%97%A5%28%E5%9C%9F%2C%E6%97%A5%29%0D%0A%E3%80%80%E2%98%86%E6%AF%8E%E5%B9%B4%E9%96%8B%E5%82%AC%EF%BC%81%0D%0A~~~~~~~~~~~~~~~~~~~~~~~~%0D%0A%0D%0A%E9%83%A8%E6%B4%BB%E5%8B%95%E3%82%84%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AE%E6%B0%97%E5%90%88%E3%81%84%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%9F%E4%B8%80%E8%88%AC%E5%B1%95%E7%A4%BA%0D%0A%E3%81%8B%E3%81%8D%E6%B0%B7%20%E3%82%A2%E3%82%A4%E3%82%B9%20%E3%83%81%E3%83%A5%E3%83%AD%E3%82%B9%20%E7%84%BC%E3%81%8D%E3%81%9D%E3%81%B0%20%E3%81%8B%E3%82%89%E6%8F%9A%E3%81%92%E3%81%AA%E3%81%A9%E3%81%AE%E6%A8%A1%E6%93%AC%E5%BA%97%0D%0A%E3%82%A2%E3%83%84%E3%81%84%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E3%82%84%E4%BD%93%E8%82%B2%E9%A4%A8%E8%A1%8C%E4%BA%8B%E2%80%A6%E2%80%A6%0D%0A%0D%0A%E7%86%B1%E3%81%8D%E6%BC%A2%E3%81%9F%E3%81%A1%E3%81%AE%E5%A7%BF%E3%82%92%E3%81%9D%E3%81%AE%E7%9B%AE%E3%81%A7%E8%A6%8B%E3%81%AB%E6%9D%A5%E3%81%A6%E3%81%8F%E3%82%8C%E3%80%82%0D%0A%0D%0A%E5%BD%93%E6%97%A5%E3%81%AF%E3%80%81%E9%AB%98%E5%B4%8E%E9%A7%85%E3%81%8B%E3%82%89%E7%84%A1%E6%96%99%E3%81%AE%E3%82%B7%E3%83%A3%E3%83%88%E3%83%AB%E3%83%90%E3%82%B9%E3%81%8C%E5%87%BA%E3%82%8B%E3%81%9E%E3%80%82%0D%0A%0D%0A%E2%98%86%E8%A9%B3%E3%81%97%E3%81%8F%E3%81%AF%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%EF%BC%81%0D%0Ahttp%3A%2F%2Fsuiranfes.com%2F%0D%0A%0D%0A%E2%98%86%E5%85%AC%E5%BC%8FTwitter%E3%82%82%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%88%E3%81%AA%EF%BC%81%0D%0Ahttp%3A%2F%2Ftwitter.com%2Fsuiranfes%0D%0A%0D%0A%23%E7%BF%A0%E5%B7%92%E7%A5%AD%20%23%E3%82%B9%E3%82%A4%E3%83%A9%E3%83%B3%E7%A5%AD%20%23%E9%AB%98%E9%AB%98%20%23%E6%96%87%E5%8C%96%E7%A5%AD",
+            "twitter" : "%e3%80%90%20%e7%9c%8c%e7%ab%8b%e9%ab%98%e5%b4%8e%e9%ab%98%e6%a0%a1%e6%96%87%e5%8c%96%e7%a5%ad%20%23%e7%bf%a0%e5%b7%92%e7%a5%ad%20%e3%80%91%0d%0a%0d%0a%e3%83%bb%e9%ab%98%e9%ab%98%e3%81%aa%e3%82%89%e3%81%a7%e3%81%af%e3%81%ae%e3%80%88%e3%81%8a%e3%82%82%e3%81%a6%e3%81%aa%e3%81%97%e3%80%89%0d%0a%e3%83%bb%e9%a7%85%e3%81%8b%e3%82%89%e7%84%a1%e6%96%99%e3%82%b7%e3%83%a3%e3%83%88%e3%83%ab%e3%83%90%e3%82%b9%0d%0a%e3%83%bb%e6%a8%a1%e6%93%ac%e5%ba%97%e3%82%82%e5%85%85%e5%ae%9f%0d%0a%e3%83%bb%e8%a6%8b%e3%81%a6%e3%81%9f%e3%81%ae%e3%81%97%e3%81%84%e3%83%bb%e3%82%84%e3%81%a3%e3%81%a6%e9%9d%a2%e7%99%bd%e3%81%84%20%e9%83%a8%e6%b4%bb%e5%8b%95%e3%83%bb%e3%82%af%e3%83%a9%e3%82%b9%e5%b1%95%e7%a4%ba%0d%0a%e3%83%bb%e3%82%a2%e3%83%84%e3%81%84%e3%82%b9%e3%83%86%e3%83%bc%e3%82%b8%0d%0a%0d%0a%e8%a9%b3%e3%81%97%e3%81%8f%e3%81%af%e3%83%9b%e3%83%bc%e3%83%a0%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%a7%ef%bc%81"
+        },
+        "pages" : [
+            {
+                "id" : "index",
+                "name" : "index",
+                "title" : "トップページ",
+                "description" : "来場者数1万5千人を誇る県内一の文化祭。第65回は2017年6月3日(土)4日(日)開催。テーマは“No SurFace”、日本語で言ったら「おもてなし」。ごめんなさい、駄洒落です。",
+                "keywords" : ["スイラン祭","文化祭","群馬","高校","高高","すいらんさい","スイランサイ","すいらん祭","すいらん","タカタカ"],
+                "enable" : true
+            },
+            {
+                "id" : "notices",
+                "name" : "notices",
+                "title" : "ご注意･ご案内",
+                "description" : "当日のご案内や守っていただきたい事をまとめました。",
+                "keywords" : ["スイラン祭","注意事項"],
+                "enable" : true
+            },
+            {
+                "id" : "access",
+                "name" : "access",
+                "title" : "アクセス",
+                "description" : "当日運行される高崎駅からのシャトルバスや駐車場などについてです。",
+                "keywords" : ["スイラン祭","バス","シャトル","直通"],
+                "enable" : true
+            },
+            {
+                "id" : "pantene",
+                "name" : "pantene",
+                "title" : "一般展示",
+                "description" : "校内の展示について。部活展示およびクラス展示などを、教室棟を模した図でリストアップしました。",
+                "keywords" : ["スイラン祭","部活展示","部展示","学級展示"],
+                "enable" : true
+            },
+            {
+                "id" : "food",
+                "name" : "food",
+                "title" : "食べ物",
+                "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店・食堂・喫茶店についてです。",
+                "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"],
+                "enable" : true,
+                "children" : [
+                    {
+                        "title" : "模擬店",
+                        "add" : "?tab=stall",
+                        "enable" : true
+                    },
+                    {
+                        "title" : "食堂",
+                        "add" : "?tab=bakery",
+                        "enable" : true
+                    },
+                    {
+                        "title" : "喫茶店",
+                        "add" : "?tab=cafe",
+                        "enable" : true
+                    }
+                ]
+            },
+            {
+                "id" : "events",
+                "name" : "events",
+                "title" : "イベント",
+                "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表情報です。",
+                "keywords" : ["スイラン祭"],
+                "enable" : true,
+                "children" : [
+                    {
+                        "title" : "イベントステージ",
+                        "add" : "?tab=stage",
+                        "enable" : true
+                    },
+                    {
+                        "title" : "体育館",
+                        "add" : "?tab=gym",
+                        "enable" : true
+                    },
+                    {
+                        "title" : "翠巒会館",
+                        "add" : "?tab=kaikan",
+                        "enable" : true
+                    },
+                    {
+                        "title" : "中庭",
+                        "add" : "?tab=nakaniwa",
+                        "enable" : true
+                    }
+                ]
+            },
+            {
+                "id" : "goods",
+                "name" : "goods",
+                "title" : "グッズ",
+                "description" : "翠巒祭限定グッズです。",
+                "keywords" : ["スイラン祭"],
+                "enable" : true
+            },
+            {
+                "id" : "invmatch",
+                "name" : "invmatch",
+                "title" : "招待試合",
+                "description" : "運動部の活躍もぜひご覧ください。",
+                "keywords" : ["スイラン祭"],
+                "enable" : true
+            },
+            {
+                "id" : "radio",
+                "name" : "radio",
+                "title" : "校内放送",
+                "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集しています。",
+                "keywords" : ["スイラン祭"],
+                "enable" : true
+            },
+            {
+                "id" : "gallery",
+                "name" : "gallery",
+                "title" : "ギャラリー",
+                "description" : "翠巒祭のポスター・チラシや、壁画などについての紹介です。",
+                "keywords" : ["スイラン祭","高崎高校","デザイン"],
+                "enable" : true
+            },
+            {
+                "id" : "about",
+                "name" : "about",
+                "title" : "概要",
+                "description" : "翠巒祭の沿革や今年のテーマについてです。",
+                "keywords" : ["スイラン祭","高崎高校","歴史"],
+                "enable" : true
+            },
+            {
+                "id" : "404",
+                "name" : "404",
+                "title" : "エラー「404」",
+                "description" : "未公開のページか、間違ったアドレスである可能性があります",
+                "keywords" : [""],
+                "enable" : false
+            }
+        ],
+        "colorpalet" : {
+            "theme" : "#e7001d",
+            "suiran-blue" : "#0071b2",
+            "bg" : "#f2e4b3"
+        },
+        "updatebadges" : {
+            "new" : {
+                "title" : "新規公開",
+                "style" : "success"
+            },
+            "revice" : {
+                "title" : "訂正",
+                "style" : "warning"
+            },
+            "modify" : {
+                "title" : "改善",
+                "style" : "warning"
+            },
+            "change" : {
+                "title" : "変更",
+                "style" : "primary"
+            },
+            "add" : {
+                "title" : "追加",
+                "style" : "info"
+            },
+            "info" : {
+                "title" : "情報",
+                "style" : "info"
+            },
+            "delete" : {
+                "title" : "削除",
+                "style" : "danger"
+            }
+        },
+        "updates" : [
+            {
+                "date" : "2017-05-30T23:53+09:00",
+                "name" : "change_gym_2",
+                "title" : "体育館のページをまた更新しました",
+                "description" : "サッカー部、生徒会、地学部の紹介文の追加、その他微調整をしました。",
+                "link" : "events?tab=gym",
+                "badge" : "change"
+            },
+            {
+                "date" : "2017-05-30T01:50+09:00",
+                "name" : "revice_mandorin",
+                "title" : "「マンドリン部☆」の時間を修正しました",
+                "description" : "誤った時間が掲載されていました。",
+                "link" : "events?tab=kaikan",
+                "badge" : "revice"
+            },
+            {
+                "date" : "2017-05-30T01:50+09:00",
+                "name" : "revice_invmatch",
+                "title" : "招待試合の時間を修正しました",
+                "description" : "物理部とサッカー部が変更になっています。ご確認ください。",
+                "link" : "invmatch",
+                "badge" : "revice"
+            },
+            {
+                "date" : "2017-05-30T01:50+09:00",
+                "name" : "change_gym",
+                "title" : "体育館のページを更新しました",
+                "description" : "各団体ごとに分割しました。",
+                "link" : "events?tab=gym",
+                "badge" : "change"
+            },
+            {
+                "date" : "2017-05-27T07:00+09:00",
+                "name" : "sinai_senden",
+                "title" : "今日は市内宣伝です！",
+                "description" : "12時30分頃に高高から高崎駅に向けて出発予定です。",
+                "link" : "",
+                "badge" : "info"
+            },
+            {
+                "date" : "2017-05-26T23:30+09:00",
+                "name" : "grand_open",
+                "title" : "グランドオープン",
+                "description" : "翠巒祭に関するすべての情報が出揃いました。",
+                "link" : "",
+                "badge" : "new"
+            },
+            {
+                "date" : "2017-05-02T18:00+09:00",
+                "name" : "notification",
+                "title" : "サイトから通知が受信できるようになりました",
+                "description" : "許可すると翠巒祭の最新情報をキャッチできます",
+                "link" : "",
+                "badge" : "new"
+            },
+            {
+                "date" : "2017-05-01T18:00+09:00",
+                "name" : "site_preopen",
+                "title" : "第65回サイト正式版公開",
+                "description" : "順次情報をお届けします。よろしくお願いします。",
+                "link" : "",
+                "badge" : "new"
+            }
+        ]
+    }
+}

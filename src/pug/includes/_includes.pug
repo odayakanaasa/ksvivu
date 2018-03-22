@@ -1,0 +1,15 @@
+
+link(href=`${site.CDN}2017/font-awesome/4.7.0/css/font-awesome.min.css`, rel="preload", as="style")
+link(href=`${site.CDN}2017/icons/1.1.5/style.css`, rel="preload", as="style")
+link(href=`/assets/style.min.css`, rel="stylesheet")
+
+link(href=`${site.CDN}/2017/bgimages/v2.0/background-n.png`, rel="preload")
+link(href=`${site.CDN}/2017/bgimages/v2.0/background-g.png`, rel="preload")
+link(href=`${site.CDN}/2017/bgimages/v2.0/background-s.png`, rel="preload")
+link(href=`${site.CDN}/2017/img/top/saya_modified5.svgz`, rel="preload")
+
+script(src="/assets/main.min.js")
+script(src="https://cdn.onesignal.com/sdks/OneSignalSDK.js", async, defer)
+script
+  include:oneline ../../js/serviceworker.js
+script(src="https://apis.google.com/js/platform.js", async, defer) {lang: 'ja'}

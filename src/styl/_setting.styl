@@ -1,0 +1,55 @@
+/*!
+*
+*
+* Copyright 2017 群馬県立高崎高等学校
+*                第65回翠巒祭
+*
+*                Gunma Pref. Takasaki High School
+*                The 65th Suiran Festival
+*
+*                https://2017.suiranfes.com/ 
+*
+*
+*/
+
+json('../../docs/api/v1/index.json')
+
+bgimg-n = site-CDN + '2017/bgimages/v2.0/background-n.png'
+bgimg-g = site-CDN + '2017/bgimages/v2.0/background-g.png'
+bgimg-s = site-CDN + '2017/bgimages/v2.0/background-s.png'
+-top-bgimg-saya = site-CDN + '2017/img/top/saya_modified5.svgz'
+-top-bgimg-posterex = site-CDN + '2017/img/top/poster2017_ex.jpg'
+
+.bgimg-g
+  background-image: url(bgimg-g)
+.bgimg-s
+  background-image: url(bgimg-s)
+.bgimg-n
+  background-image: url(bgimg-n)
+@media screen and (min-width: 500px)
+  .bgimg-g
+  .bgimg-n
+  .bgimg-s
+    background-size: auto
+@media screen and (max-width: 500px)
+  .bgimg-g
+  .bgimg-n
+  .bgimg-s
+    background-size: 100vw
+
+fn-textshadow(s,c)
+  text-shadow: 0px 0px s rgba(red(c),green(c),blue(c),alpha:1),0px 0px s rgba(red(c),green(c),blue(c),alpha:1),0px 0px s rgba(red(c),green(c),blue(c),alpha:0.2),0px 0px 1px rgba(red(c),green(c),blue(c),alpha:1)
+
+.bg-suiranfes
+  background-color: site-colorpalet-theme !important
+
+.text-suiranfes
+  color: site-colorpalet-theme !important
+
+.bg-white
+  background-color: white !important
+  color: #212121 !important
+
+.bg-dark
+  background-color: #212121 !important
+  color: white !important

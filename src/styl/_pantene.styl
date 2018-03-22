@@ -1,0 +1,115 @@
+.-pantene-card-hw
+  width: 100%
+  height: 7em
+
+.-pantene-screen
+  box-shadow: 0 0 3px #000
+
+.-pantene-index-1st
+  background-color: #e1f5fe
+  background-attachment: local
+  @extend .bgimg-s
+
+.-pantene-index-columns
+  @extend .-pantene-index-1st
+  @media screen and (max-width: 1701px)
+    overflow-x: scroll
+
+  h3
+    position: sticky
+    left: 0
+
+  .-pantene-floor
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    height: 100%
+    @media screen and (max-width: 1701px)
+      width: 1701px
+
+    .-pantene-room
+      display: block
+      flex: 1 1
+      word-wrap: break-word
+      word-break: break-all
+
+      .card
+        @extend .-pantene-card-hw
+
+      a.card
+        color: rgba(255,255,255,1)
+
+      div.card
+        color: rgba(255,255,255,.85)
+
+    .-pantene-stair
+      display: block
+      flex: 0 0 54px
+      height: 7em
+      width: 54px
+      line-height: 1em
+      word-wrap: break-word
+      word-break: break-all
+
+      .card
+        @extend .-pantene-card-hw
+        text-align: center
+        color: rgba(255,255,255,.85)
+
+        .-pantene-stair-hidden
+          color: #ff9800
+  
+      &.-pantene-stair-s1 .card
+      &.-pantene-stair-s3 .card
+        height: 7.25em
+      &.-pantene-stair-s2 .card
+        height: 7.5em
+          
+      .rounded-top
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0 
+
+      .rounded-bottom
+        border-top-left-radius: 0
+        border-top-right-radius: 0 
+
+    .-pantene-toilet
+      display: block
+      flex: 0 0 54px
+      width: 54px
+      line-height: 1em
+      word-wrap: break-word
+      word-break: break-all
+
+      .card
+        display: flex
+        @extend .-pantene-card-hw
+        text-align: center
+        color: rgba(255,255,255,.85)
+    
+.-pantene-card-toilet
+  border-color: #333
+  background-color: #333
+
+.-pantene-modal
+  h5
+    margin: 0
+  p
+    margin: 0
+  img
+    display: block
+    max-width: 100%
+    height: 10em
+
+.-pantene-wtf
+  height: auto !important
+
+.card-outline-secondary
+  background-color: rgba(255,255,255,.85) !important
+  color: black !important
+
+.-pantene-u1701-text:after
+  @media screen and (max-width: 1701px)
+    content: "スクロールして"
+  @media screen and (min-width: 1702px)
+    content: ""

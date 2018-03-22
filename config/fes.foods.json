@@ -1,0 +1,570 @@
+{
+    "fes": {
+        "foods": [
+            {
+                "name": "juice",
+                "title": "ジュース",
+                "description": "天空ジュース",
+                "kinds": [
+                    {
+                        "description": "",
+                        "name": "Minimum",
+                        "price": 130,
+                        "title": "最低"
+                    },
+                    {
+                        "description": "",
+                        "name": "Maximum",
+                        "price": 150,
+                        "title": "最高"
+                    }
+                ],
+                "shop": {
+                    "location": [1,7],
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "churro",
+                "title": "チュロス",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "チュロス",
+                        "name": "churro",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 4,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "yakimanju",
+                "title": "焼きまんじゅう",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "焼きまんじゅう",
+                        "name": "yakimanju",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 5,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "DolphinDots",
+                "title": "粒粒アイス",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "粒粒アイス",
+                        "name": "DolphinDots",
+                        "price": 300,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 3,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "Frankfurt",
+                "title": "フランクフルト",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "フランクフルト",
+                        "name": "Frankfurt",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 9,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "yakisoba",
+                "title": "焼きそば",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "焼きそば",
+                        "name": "yakisoba",
+                        "price": 150,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 8,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "karaage",
+                "title": "からあげ",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "からあげ",
+                        "name": "karaage",
+                        "price": 150,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 10,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "popcorn",
+                "title": "ポップコーン",
+                "description": "縁日コーナー",
+                "kinds": [
+                    {
+                        "title": "ポップコーン",
+                        "name": "popcorn",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 11,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "wataame",
+                "title": "わたあめ",
+                "description": "縁日コーナー",
+                "kinds": [
+                    {
+                        "title": "わたあめ",
+                        "name": "wataame",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 11,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "senbei",
+                "title": "らくがきせんべい",
+                "description": "縁日コーナー",
+                "kinds": [
+                    {
+                        "title": "らくがきせんべい",
+                        "name": "senbei",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 11,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "crepe",
+                "title": "クレープ",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "最低",
+                        "name": "minimum",
+                        "price": 250,
+                        "description": ""
+                    },
+                    {
+                        "title": "最高",
+                        "name": "maximum",
+                        "price": 300,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 2,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "kakigori",
+                "title": "かき氷",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "かき氷",
+                        "name": "kakigori",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "location": 6,
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "torihei",
+                "title": "登利平 鳥めし",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "竹",
+                        "name": "bamboo",
+                        "price": 750,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "chicken_sauce_katsu",
+                "title": "チキンソースカツ丼",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "チキンソースカツ丼",
+                        "name": "chicken_sauce_katsu",
+                        "price": 550,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "hamburg_stake",
+                "title": "ハンバーグ弁当",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "ハンバーグ弁当",
+                        "name": "hamburg_stake",
+                        "price": 500,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "country",
+                "title": "田舎弁当",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "田舎弁当",
+                        "name": "country",
+                        "price": 450,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "galbi",
+                "title": "カルビ焼丼",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "カルビ焼丼",
+                        "name": "galbi",
+                        "price": 550,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "nori_kara",
+                "title": "のりから弁当",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "のりから弁当",
+                        "name": "nori_kara",
+                        "price": 450,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "makunouchi",
+                "title": "幕の内弁当",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "幕の内弁当",
+                        "name": "makunouchi",
+                        "price": 550,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "riceball",
+                "title": "おにぎり",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "さけ",
+                        "name": "salmon",
+                        "price": 120,
+                        "description": ""
+                    },
+                    {
+                        "title": "こんぶ",
+                        "name": "konbu",
+                        "price": 110,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "greentea",
+                "title": "お茶",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "お茶",
+                        "name": "greentea",
+                        "price": 130,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "bakery"
+                }
+            },
+            {
+                "name": "icecream",
+                "title": "アイス",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "バニラ",
+                        "name": "vanilla",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "チョコレート",
+                        "name": "chocolate",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "ストロベリー",
+                        "name": "strawberry",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "抹茶",
+                        "name": "matcha",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "オレンジ",
+                        "name": "orange",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "レモン",
+                        "name": "lemon",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "cafe"
+                }
+            },
+            {
+                "name": "cake",
+                "title": "ケーキ",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "ティラミス",
+                        "name": "tiramisu",
+                        "price": 250,
+                        "description": ""
+                    },
+                    {
+                        "title": "フランボアタルト",
+                        "name": "raspberry_tarte",
+                        "price": 250,
+                        "description": ""
+                    },
+                    {
+                        "title": "ショコラケーキ",
+                        "name": "chocolat",
+                        "price": 250,
+                        "description": ""
+                    },
+                    {
+                        "title": "ニューヨークチーズケーキ",
+                        "name": "NewYork_cheese",
+                        "price": 250,
+                        "description": ""
+                    },
+                    {
+                        "title": "抹茶ズコット",
+                        "name": "matcha_zuccotto",
+                        "price": 250,
+                        "description": ""
+                    },
+                    {
+                        "title": "モンブラン",
+                        "name": "montblanc",
+                        "price": 250,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "cafe"
+                }
+            },
+            {
+                "name": "drink",
+                "title": "ドリンク",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "コーラ",
+                        "name": "cola",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "サイダー",
+                        "name": "cider",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "オレンジジュース",
+                        "name": "orange_juice",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "カルピス",
+                        "name": "calpis",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "ストレートティー",
+                        "name": "straight_tea",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "ミルクティー",
+                        "name": "milk_tea",
+                        "price": 100,
+                        "description": ""
+                    },
+                    {
+                        "title": "コーヒー",
+                        "name": "coffee",
+                        "price": 100,
+                        "description": "微糖"
+                    },
+                    {
+                        "title": "カフェオレ",
+                        "name": "cafe_au_lait",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "cafe"
+                }
+            },
+            {
+                "name": "set",
+                "title": "お得なセットメニュー",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "Aセット",
+                        "name": "A",
+                        "price": 180,
+                        "description": "お好みの<b class='text-danger fw-800'>アイス</b> + お好みのドリンク"
+                    },
+                    {
+                        "title": "Bセット",
+                        "name": "B",
+                        "price": 330,
+                        "description": "お好みの<b class='text-danger fw-800'>ケーキ</b> + お好みのドリンク"
+                    }
+                ],
+                "shop": {
+                    "name": "cafe"
+                }
+            }
+        ],
+        "foodsshops": {
+            "stall": {
+                "description": "詳しい場所はパンフレットをご覧ください。\n完売する可能性があります。ご了承ください。\n列規制は16時10分-15分です。\nゴミはゴミステーションへお願いします。",
+                "is_plural": true,
+                "title": "模擬店",
+                "style": "warning",
+                "allergen_info": false,
+                "enable" : true
+            },
+            "bakery": {
+                "description": "校舎2階にあります。\nラスト―オーダーは15:30です。\n時間前に完売した場合は販売終了とさせていただきます。\n弁当はお持ち帰りできます。",
+                "is_plural": false,
+                "title": "食堂",
+                "style": "info",
+                "allergen_info": false,
+                "enable" : true
+            },
+            "cafe": {
+                "description": "校舎2階にあります。 \nラスト―オーダーは15:30です。\n時間前に完売した場合は販売終了とさせていただきます。 ",
+                "is_plural": false,
+                "title": "喫茶店",
+                "style": "danger",
+                "allergen_info": false,
+                "enable" : true
+            }
+        }
+    }
+}

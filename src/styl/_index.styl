@@ -1,0 +1,266 @@
+/*
+*
+* index
+*
+*/
+.-index-first
+.-index-second
+  height: 100%
+
+.-index-third
+  background-image: url(-top-bgimg-posterex)
+  background-size: cover
+  background-position: center
+  height: 100%
+  
+  .-index-onposter
+    box-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
+
+.-index-morebigger
+
+  @media screen and (max-width: 400px)
+    font-size: 1rem
+  @media screen and (min-width: 400px)
+    font-size: 1.15rem
+  @media screen and (min-width: 500px)
+    font-size: 1.3rem
+  @media screen and (min-width: 768px)
+    font-size: 1rem
+  @media screen and (min-width: 880px)
+    font-size: 1.15rem
+  @media screen and (min-width: 1000px)
+    font-size: 1.3rem
+  @media screen and (min-width: 1200px)
+    font-size: 1.07rem
+  @media screen and (min-width: 1401px)
+    font-size: 1.3rem
+  @media screen and (min-width: 1701px)
+    font-size: 1.5rem
+
+/*
+*
+* LEFT
+*
+*/
+
+.-index-left
+  text-align: right
+  text-anchor: middle
+  vertical-align: middle
+  text-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
+
+  @extend .-index-morebigger
+
+  .-index-title
+    display: inline-block
+    font-size: 2.8em
+    font-weight: 800
+
+  .-index-school
+    display: inline-block
+    width: 100%
+    text-align left
+    font-size: 0.4em
+    font-weight: 800
+
+  .-index-theme
+    font-size: 2.5em
+    line-height: 1em
+    font-weight: 900
+  
+  .-index-tema
+    font-size: 0.4em
+    font-weight: 800
+
+  .-index-themeinjp
+    font-size: 1.5em
+    line-height: 1em
+    font-weight: 800
+
+  .-index-date
+    line-height: 1.7em
+    font-weight: 900
+
+    .-index-date-y
+      font-size: 1.1em
+
+    .-index-date-m
+      font-size: 1.6em
+
+    .-index-date-day1num
+    .-index-date-day2num
+      font-size: 1.6em
+
+    .-index-date-day1Sat
+      color: blue
+      font-size: 1em
+
+    .-index-date-day2Sun
+      color: red
+      font-size: 1em
+
+    .-index-date-day1start
+    .-index-date-day2start
+      font-size: 1.3em
+
+
+.-index-timer
+  font-weight: 800
+  .yycountdown-box
+    display: inline-block
+
+    .yyc-day
+    .yyc-hou
+    .yyc-min
+    .yyc-sec
+      font-size:1.4em
+
+    .yyc-day-text
+    .yyc-hou-text
+    .yyc-min-text
+    .yyc-sec-text
+      font-size:1em
+      font-weight: 700
+
+/*
+*
+* MIDDLE
+*
+*/
+
+.-index-middle
+
+  .list-group-item:nth-child(7)
+  .list-group-item:last-child
+    text-align: center !important
+    b
+      text-align: inherit
+      width: 100%
+
+  .list-group-item:nth-child(0)
+  .list-group-item:nth-child(1)
+  .list-group-item:nth-child(2)
+  .list-group-item:nth-child(3)
+  .list-group-item:nth-child(4)
+  .list-group-item:nth-child(5)
+  .list-group-item:nth-child(6)
+    text-align: left !important
+
+  .list-group-item:nth-child(n+8)
+    display: none
+
+
+/*
+*
+* RIGHT
+*
+*/
+
+.-index-right
+  @extend .bgimg-n
+  background-color: lighten(#94B78D,35%)
+  height: 100%
+
+  @extend .-index-morebigger
+
+  a
+    display: block
+    color: white
+    width: 100%
+    height: auto
+    overflow: hidden
+
+    &:link
+    &:visited
+      color: black
+    
+    &:active
+    &:focus
+    &:hover
+      color: maroon
+      text-decoration: none
+      filter: none !important
+
+  .-index-pickups-wrap
+    display: flex
+    padding: 1.25rem
+    transition-timing-function: ease !important
+    transition-duration: .25s !important
+    transition-property: all !important
+    background-image: url(-top-bgimg-saya)
+    background-size: 96px 96px
+    box-shadow: 0 0 4px rgba(0,0,0,0.9)
+    text-shadow: 0 0 3px black
+    height: 100%
+
+    &:hover
+      box-shadow: 0 0 6px black, 0 0 6px black
+
+    &.Attention
+      color: white
+      background-color: darken(orange,10%)
+      padding: 3rem 1.25rem
+
+      &:hover
+        color: white
+        background-color: darken(yellow,70%)
+    
+    &.Bus
+      color: white
+      background-color: #85c600
+
+      &:hover
+        color: white
+        background-color: darken(yellowgreen,70%)
+    
+    &.Food
+      color: white
+      background-color: #24d8d8
+
+      &:hover
+        color: white
+        background-color: darken(cyan,70%)
+    
+    &.Pantene
+      color: white
+      background-color: site-colorpalet-theme
+
+      &:hover
+        color: white
+        background-color: darken(site-colorpalet-theme,70%)
+    
+    &.Events
+      color: white
+      background-color: lighten(blue,10%)
+
+      &:hover
+        color: white
+        background-color: darken(blue,70%)
+    
+    &.Gym
+      color: white
+      background-color: lighten(magenta,10%)
+
+      &:hover
+        color: white
+        background-color: darken(magenta,70%)
+
+    .-index-pickups
+      &:hover
+      &:active
+      &:focus
+        filter: none !important
+      .-index-pickups-head
+        font-size: 2em
+        font-weight: 700
+        &:hover
+        &:active
+        &:focus
+          filter: none !important
+      .-index-pickups-desc
+        font-size: 1.25em
+        font-weight: 200
+        &:hover
+        &:active
+        &:focus
+          filter: none !important

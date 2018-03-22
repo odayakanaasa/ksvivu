@@ -1,0 +1,96 @@
+- function typeis(type, obj) {
+-     var clas = Object.prototype.toString.call(obj).slice(8, -1);
+-     if(obj !== undefined && obj !== null && clas === type) return true
+-     else return false;
+- }
+-
+- function arrayMerge() {
+-   if (arguments.length === 0) return false
+-   var i, len, key, result = new Object()
+-   for (i = 0, len = arguments.length;i < len; i++) {
+-     if (typeof arguments[i] !== 'object') continue
+-     for (key in arguments[i]) {
+-       if (isFinite(key)) {
+-         result.push(arguments[i][key])
+-       } else {
+-         result[key] = arguments[i][key]
+-       }
+-     }
+-   }
+-   return result
+- }
+
+- function printDate( data, printtype ){
+-   if (arguments.length === 0) return false;
+-   var upData,upYear,upMonth,upDate,upHours,upMinutes,upDay,DayArray,result = ""
+-   upData    = new Date(data)
+-   upYear    = upData.getFullYear()
+-   upMonth   = upData.getMonth() + 1
+-   upDate    = upData.getDate()
+-   upHours   = upData.getHours()
+-   upMinutes = ( '00' + upData.getMinutes() ).slice(-2)
+-   upDay     = upData.getDay()
+-   DayArray  = ["日","月","火","水","木","金","土"]
+-   
+-   if(printtype == "date"){
+-     result = upYear+'年'+upMonth+'月'+upDate+'日'+'('+DayArray[upDay]+')'
+-   } else if(printtype == "time"){
+-     result = upHours+':'+upMinutes
+-   } else {
+-     result = upYear+'年'+upMonth+'月'+upDate+'日'+'('+DayArray[upDay]+') '+upHours+':'+upMinutes
+-   }
+- 
+-   return result
+- }
+
+
+- for( var i in site.pages ) {
+-   if( page.id == site.pages[i].id ) {
+-     page = arrayMerge( page, site.pages[i] )
+-   }
+- }
+- for( var i in fes.pantene ) {
+-   if( page.id == "pantene/" + fes.pantene[i].id ) {
+-     page = arrayMerge( page, fes.pantene[i] )
+-   }
+- }
+- page.keyword = ""
+- for( var i in page.keywords ) {
+- page.keyword += page.keywords[i]
+-   if ( i < page.keywords.length - 1 ) {
+-     page.keyword += ","
+-   }
+- }
+- site.updates.sort(function(a,b) {
+-   if(a.date < b.date) { return 1 } else { return -1 }
+- });
+- fes.pantene.sort(function(a,b) {
+-   if(a.place.floor < b.place.floor) { return 1 } else { return -1 }
+-   if(a.place.room < b.place.room) { return 1 } else { return -1 }
+- });
+- fes.events.sort(function(a,b) {
+-   if(a.startDate > b.startDate) { return 1 } else { return -1 }
+- });
+- fes.invmatches.sort(function(a,b) {
+-   if(a.startDate > b.startDate) { return 1 } else { return -1 }
+- });
+
+- function _food_header_price(kinds){
+- if(kinds.length == 1){
+-   return { text : kinds[0].price + "円", type : "one"}
+- }  else { 
+- var prices = [];
+- kinds.sort(function(a,b) {
+-   if(a.price > b.price) { return 1 } else { return -1 }
+- });
+- for(var t in kinds){
+-   prices[t] = kinds[t].price
+- }
+- var pri = prices.filter(function (x, c, self) {
+-       return self.indexOf(x) === c;
+-   });
+- if( pri.length == 1){
+-   return { text: "各" + prices[0] + "円", type : "uniform" }
+- } else {
+-   return { text: prices[0] + "円～", type : "plural" }
+- }}}

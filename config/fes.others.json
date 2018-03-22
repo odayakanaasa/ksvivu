@@ -1,0 +1,117 @@
+{
+    "fes": {
+        "Day1": {
+            "endDate": "2017-06-03T17:00+09:00",
+            "startDate": "2017-06-03T12:00+09:00"
+        },
+        "Day2": {
+            "endDate": "2017-06-04T16:30+09:00",
+            "startDate": "2017-06-04T09:00+09:00"
+        },
+        "common": {
+            "address": {
+                "addressCountry": "日本",
+                "addressLocality": "高崎市",
+                "addressNumber": "2丁目4番地1号",
+                "addressRegion": "群馬県",
+                "addressStreet": "八千代町",
+                "name": "群馬県立高崎高等学校",
+                "postNumber": "370-0861",
+                "sameAs": "http://www.takasaki-hs.gsn.ed.jp/"
+            },
+            "theme": "No SurFace",
+            "themeinjap": "おもてなし"
+        },        "invmatches": [
+            {
+                "id": "tennis",
+                "name": "tennis",
+                "title": "硬式テニス部",
+                "description": "",
+                "place": {
+                    "title" : "テニスコート"
+                },
+                "startDate": "2017-06-04T10:00+09:00",
+                "endDate": "2017-06-04T13:00+09:00",
+                "vs": {
+                    "convenient": "高東",
+                    "formal": "群馬県立高崎東等学校"
+                    }
+            },
+            {
+                "id": "soccer",
+                "name": "soccer",
+                "title": "サッカー部",
+                "description": "",
+                "place": {
+                    "title" : "サッカーグラウンド"
+                },
+                "startDate": "2017-06-04T10:00+09:00",
+                "endDate": "2017-06-04T13:00+09:00",
+                "vs": {
+                    "convenient": "健大高崎",
+                    "formal": "高崎健康福祉大学高崎高等学校"
+                    }
+            },
+            {
+                "id": "volleyball",
+                "name": "volleyball",
+                "title": "バレーボール部",
+                "description": "",
+                "place": {
+                    "title" : "第一体育館"
+                },
+                "startDate": "2017-06-03T13:00+09:00",
+                "endDate": "2017-06-03T16:00+09:00",
+                "vs": {
+                    "convenient": "明和県央",
+                    "formal": "明和県央高等学校"
+                    }
+            },
+            {
+                "id": "basketball",
+                "name": "basketball",
+                "title": "バスケットボール部",
+                "description": "",
+                "place": {
+                    "title" : "第一体育館"
+                },
+                "startDate": "2017-06-03T13:00+09:00",
+                "endDate": "2017-06-03T16:00+09:00",
+                "vs": {
+                    "convenient": "立花学園",
+                    "formal": "立花学園高等学校"
+                    }
+            },
+            {
+                "id": "physics",
+                "name": "physics",
+                "title": "物理部",
+                "description": "<a href='/pantene?modal=pantene_modal_physics' class='btn btn-primary btn-block w-100 no-barba'>一般展示</a>",
+                "place": {
+                    "title" : "校舎内:1-4"
+                },
+                "startDate": "2017-06-03T14:00+09:00",
+                "endDate": "2017-06-03T15:30+09:00",
+                "vs": {
+                    "convenient": "藤中",
+                    "formal": "群馬県立藤岡中央高等学校"
+                    }
+            },
+            {
+                "id": "baseball",
+                "name": "baseball",
+                "title": "硬式野球部",
+                "description": "",
+                "place": {
+                    "title" : "野球場"
+                },
+                "startDate": "2017-06-03T13:00+09:00",
+                "endDate": "2017-06-03T15:30+09:00",
+                "vs": {
+                    "convenient": "沼高",
+                    "formal": "群馬県立沼田高等学校"
+                    }
+            }
+        ]
+    }
+}

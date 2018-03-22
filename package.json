@@ -1,0 +1,49 @@
+{
+  "name": "2017.suiranfes.com",
+  "version": "2.5.2",
+  "description": "2017.suiranfes.com",
+  "main": "docs/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suiranfes/2017.suiranfes.com.git"
+  },
+  "author": "suiranfes <info@suiranfes.com> (https://suiranfes.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suiranfes/2017.suiranfes.com/issues"
+  },
+  "homepage": "https://2017.suiranfes.com/",
+  "devDependencies": {
+    "barba.js": "^1.0.0",
+    "browserify": "^14.1.0",
+    "chalk": "^2.0.0",
+    "electron": "^1.6.8",
+    "extend": "^3.0.1",
+    "fontmin": "^0.9.6",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^3.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "html-to-text": "^3.2.0",
+    "jquery": "^3.1.1",
+    "kramed": "^0.5.6",
+    "marked": "^0.3.6",
+    "node-sfnt": "0.0.21",
+    "pako": "^1.0.5",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5",
+    "tether": "^1.4.0",
+    "ttf2woff2": "^2.0.3",
+    "ua-parser-js": "^0.7.12",
+    "uglify-js": "^3.0.0"
+  }
+}

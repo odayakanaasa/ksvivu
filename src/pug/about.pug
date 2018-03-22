@@ -1,0 +1,17 @@
+- var page = { id :"about" };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_mixins.pug
+    include includes/_meta.pug
+    include includes/_includes.pug
+  body
+    include includes/_nav.pug
+    #barba-wrapper: .barba-container: .wrap
+      .container
+        .row
+          .col-12.py-3
+            h1 #{page.title}
+            include:kd ../text/about.kd
+    include includes/_footer.pug

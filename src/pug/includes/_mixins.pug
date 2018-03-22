@@ -1,0 +1,397 @@
+include _script.pug
+
+//-**********************************************
+  *      fa
+  *      フォントおーサム
+  ***********************************************
+
+mixin fa( $icon )
+  <i class="fa fa-#{$icon} fa-fw" aria-hidden="true"></i>
+
+mixin ft( $icon )
+  <i class="icon-#{$icon} fa-fw" aria-hidden="true"></i>
+
+//-**********************************************
+  *      badge
+  *      バッジ
+  ***********************************************
+
+mixin bootstrap_badge_pill( $badge_title, $badge_style, $badge_schema_itemprop )
+  .badge.badge-pill(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
+    | #{$badge_title}
+
+mixin bootstrap_badge_normal( $badge_title, $badge_style, $badge_schema_itemprop )
+  .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
+    | #{$badge_title}
+
+mixin bootstrap_badge_pill_lighter( $badge_title, $badge_style, $badge_schema_itemprop )
+  .badge.badge-pill(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop, style="font-weight: 500")&attributes(attributes)
+    | #{$badge_title}
+
+mixin bootstrap_badge_normal_lighter( $badge_title, $badge_style, $badge_schema_itemprop )
+  .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop, style="font-weight: 500")&attributes(attributes)
+    | #{$badge_title}
+
+//-**********************************************
+  *      index
+  *      トップページ
+  ***********************************************
+
+mixin updatearticle(i)
+  article(itemscope, itemtype="http://schema.org/NewsArticle").w-100.flex-column.align-items-start
+    .d-flex.w-100.flex-wrap
+      small
+        time(itemprop="datePublished", datetime=site.updates[i].date, content=site.updates[i].date)
+          | #{printableDate}
+      +bootstrap_badge_pill( site.updatebadges[site.updates[i].badge].title, site.updatebadges[site.updates[i].badge].style, "keywords" ).ml-auto
+    h5(itemprop="headline").my-1
+      - if(site.updates[i].link){
+        i.fa.fa-chevron-right(aria-hidden="true")
+      - }
+      | #{site.updates[i].title}
+    p(itemprop="articleBody")
+      | #{site.updates[i].description}
+    meta(itemprop="author", itemtype="http://schema.org/Thing", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
+    span(itemprop="publisher", itemtype="http://schema.org/Organization", itemscope)
+      meta(itemprop="name", content="第65回翠巒祭公式サイト")
+      span(itemprop="logo", itemtype="http://schema.org/ImageObject", itemscope)
+        meta(itemprop="url", content=`${site.URL}${site.iconpath}`)
+        meta(itemprop="width", content="600")
+        meta(itemprop="height", content="600")
+    span(itemprop="image", itemtype="http://schema.org/ImageObject", itemscope)
+      meta(itemprop="url", content=`${site.URL}${site.sitecardpath}`)
+      meta(itemprop="width", content="700")
+      meta(itemprop="height", content="389")
+
+
+//-**********************************************
+  *      pantene
+  *      一般展示
+  ***********************************************
+
+mixin pantene_columm()
+  .d-flex.flex-row.align-items-center.flex-wrap
+    if (fes.pantene[i].has_page)
+      small <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    div #{j}-#{k}
+    +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+  h6.m-0 #{fes.pantene[i].title}
+  small.-pantene-hosts
+    +pantene_column_hosts(fes.pantene[i].hosts)
+
+mixin pantene_column_hosts(hosts)
+  - for (var o in hosts) {
+    | #{hosts[o].title}
+    - if (o < hosts.length - 1){
+      | ･
+    - }
+  - }
+
+mixin _pantene_modals()
+  - for (var j = 3; j > 0; j--) {
+  -   for (var k = 9; k > 0; k--) {
+  -     var thereis = false;
+  -     for (var i in fes.pantene) {
+  -       if (fes.pantene[i].place.floor == j && fes.pantene[i].place.room == k) {
+  -         if(fes.pantene[i].has_page) {
+    .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header.flex-wrap-reverse
+            p.mr-2: b #{j}-#{k}
+            h5.mr-2 #{fes.pantene[i].title}
+            button.close.ml-auto.px-1(type="button", data-dismiss="modal", aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body.flex-wrap-reverse
+            p
+              +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+              small
+                +pantene_column_hosts(fes.pantene[i].hosts)
+            if(fes.pantene[i].image != undefined)
+              if(fes.pantene[i].image[0] == "top")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}.svg` class="block mr-auto")
+              if(fes.pantene[i].image[0] == "both")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_top.svg` class="block mr-auto")
+            div!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
+            if(fes.pantene[i].image != undefined)
+              if(fes.pantene[i].image[0] == "bottom")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}.svg` class="block ml-auto")
+              if(fes.pantene[i].image[0] == "both")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_bottom.svg` class="block ml-auto")
+          .modal-footer
+            +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,fes.pantene[i].description,fes.pantene[i].description)
+            a.btn.btn-link.no-barba.text-right(href="/pantene") 戻る
+  -         }
+  -       }
+  -     }
+  -   }
+  - }
+
+  .modal.fade.-pantene-modal(id=`pantene_modal_engra`, tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header.flex-wrap-reverse
+          p.mr-2: b 玄関
+          h5.mr-2 エントランス・グラフィック
+          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p
+            small 創作班美術課
+          p 階段の両側の超・巨大な絵で、校内へお迎えします。ぜひ御覧ください。
+
+  .modal.fade.-pantene-modal(id=`pantene_modal_endec`, tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header.flex-wrap-reverse
+          p.mr-2: b 玄関
+          h5.mr-2 校内展示シール式人気投票
+          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p
+            small 一般展示班
+          p シールを貼る方式のかんたんな投票です。クラス展示・部活動展示からそれぞれ最もよかったと思う展示を選んでください。
+            br
+            | また、Web上でも人気投票とアンケートを行います。
+            a.btn.btn-link.m-1.-pantene-wtf.no-barba(href="/", role="button", aria-disabled="true") 詳細はトップページ中段で
+
+
+mixin _pantene4th()
+  .-pantene-floor
+      .-pantene-room.p-1
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food?tab=stall") 模擬店
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
+      .-pantene-toilet.p-1
+      .-pantene-stair.p-1
+      .-pantene-room.p-1
+        a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_engra`)
+          small: div
+            +fa("chevron-right")
+            | 玄関
+          h6.m-0 エントランス・グラフィック
+          small 創作班美術課
+      .-pantene-room.p-1
+        a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_endec`)
+          small: div
+            +fa("chevron-right")
+            | 投票場
+          h6.m-0 校内展示シール式人気投票
+          small 一般展示班
+      .-pantene-room.p-1
+      .-pantene-room.p-1
+      .-pantene-room.p-1
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=nakaniwa") 中庭
+      .-pantene-stair.p-1
+      .-pantene-room.p-1
+      .-pantene-stair.p-1
+        .card.p-2(class="card-inverse card-info")
+          div.m-auto 出口
+      .-pantene-room.p-1
+        a.card.p-2(class="card-inverse card-danger", href=`/food?tab=bakery`)
+          small: div 
+            +fa("chevron-right")
+            | 2F
+          h6.m-0 食堂
+          small 食堂･喫茶店班
+      .-pantene-stair.p-1
+      .-pantene-room.p-1
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=stage") ステージ
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/invmatch") 招待試合
+
+
+//-**********************************************
+  *      food
+  *      たべもの
+  **********************************************
+mixin _food_header_price(kinds)
+  .price
+    | #{_food_header_price(kinds).text}
+
+mixin _food_tabcontent(foodsshop, key)
+  h3= foodsshop.title
+  p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
+  .-tabemon-common-wrapper
+    div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`)
+      - for(var i in fes.foods) {
+      - if ( fes.foods[i].shop.name === key ) {
+        div( id= fes.foods[i].name ).food
+          .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
+            a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
+              .card-header.d-flex.flex-wrap(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
+                h5.text-white.p-0.m-0.w-auto <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+                .ml-auto.fw-500.t-0125em.text-white.w-auto
+                  +_food_header_price(fes.foods[i].kinds)
+            .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
+              p 販売場所:<b>#{foodsshop.title}</b>
+                if(foodsshop.is_plural)
+                  - if(typeis('Number', fes.foods[i].shop.location))
+                    | #{circlenums[fes.foods[i].shop.location]}
+                  - else if(typeis('Array', fes.foods[i].shop.location))
+                    - for(var n = 0; n < fes.foods[i].shop.location.length; n++ )
+                      - if(typeis('Number', fes.foods[i].shop.location[n]))
+                        | #{circlenums[fes.foods[i].shop.location[n]]}
+                br
+                span.mb-0!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
+              .d-flex.flex-wrap.pb-2
+                - if( fes.foods[i].kinds.length > 1 || fes.foods[i].title != fes.foods[i].kinds[0].title || foodsshop.allergen_info ) {
+                - if( _food_header_price(fes.foods[i].kinds).type == "plural") {
+                - for(var j in fes.foods[i].kinds) {
+                  .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
+                    h6.card-title
+                      +fa("caret-right")
+                      | #{fes.foods[i].kinds[j].title}
+                    p.card-text.pb-1 #{fes.foods[i].kinds[j].price}円
+                    if fes.foods[i].kinds[j].description
+                      p.card-text.pb-1!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
+                    if foodsshop.allergen_info
+                      .card-text
+                        +bootstrap_badge_normal("アレルギー物質","primary")
+                        if ( fes.foods[i].kinds[j].allergens === undefined )
+                          +bootstrap_badge_pill_lighter("調査中","warning")
+                        else if ( fes.foods[i].kinds[j].allergens === null )
+                          +bootstrap_badge_pill_lighter("なし","success")
+                        else
+                          - for(var k in fes.foods[i].kinds[j].allergens){
+                              +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                          - }
+                - }
+                - } else {
+                  ul
+                    - for(var j in fes.foods[i].kinds) {
+                      li #{fes.foods[i].kinds[j].title}
+                      if (fes.foods[i].kinds[j].description || foodsshop.allergen_info)
+                        ul
+                          if (fes.foods[i].kinds[j].description)
+                            li!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
+                          if (foodsshop.allergen_info)
+                            li
+                              +bootstrap_badge_normal("アレルギー物質","primary")
+                              if ( fes.foods[i].kinds[j].allergens === undefined )
+                                +bootstrap_badge_pill_lighter("調査中","warning")
+                              else if ( fes.foods[i].kinds[j].allergens === null )
+                                +bootstrap_badge_pill_lighter("なし","success")
+                              else
+                                - for(var k in fes.foods[i].kinds[j].allergens){
+                                    +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                                - }
+                    - }
+                - } }
+              +_urlshare_igroup(site.URL + "food?tab=" + key + "&collapse=food_collapse_" + key + "_" + fes.foods[i].name, "【" + foodsshop.title + "】 " + fes.foods[i].title + " " + _food_header_price(fes.foods[i].kinds), fes.foods[i].description, fes.foods[i].description)
+      - } }
+
+
+//-**********************************************
+  *      events
+  *      イベント
+  ***********************************************
+
+mixin _event_tabcontent_ub(eventsplace, key, mmday)
+  h4.mt-3 #{mmday}日目
+  .-tabemon-common-wrapper
+    div(role="tablist",aria-multiselectable="true",id=`accordion_${key}_${mmday}`)
+      - var thereis = false
+      each event, i in fes.events
+        - var this_startDate = new Date(fes.events[i].startDate)
+        -     this_endDate = new Date(fes.events[i].endDate)
+        -     day_startDate = new Date(fes['Day' + mmday].startDate)
+        -     day_endDate = new Date(fes['Day' + mmday].endDate)
+          if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
+            - thereis = true
+            div( id= fes.events[i].id ).event
+              .card(class=`card-outline-${eventsplace.style}`).-tabemon-card
+                a(data-toggle="collapse", data-parent=`#accordion_${key}_${mmday}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-controls=`#event_collapse_${key}_${fes.events[i].id}`)
+                  .card-header(class=`bg-${eventsplace.style}`, id=`accordion_${key}_${fes.events[i].id}`,role="tab")
+                    h5.text-white.p-0.m-0
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.events[i].title}
+                .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`#accordion_${key}_${fes.events[i].name}`): .card-block.bg-white
+                  p.mb-0!= fes.events[i].description.replace(/\r?\n|\r/g,"<br>")
+                  if ( fes.events[i].programs != null )
+                    ol.programs
+                      each program in fes.events[i].programs
+                        li!= program
+                  if ( fes.events[i].youtube_id != null )
+                    h6.mt-3.p-0.mb-0 去年の動画
+                    .align-self-center.embed-responsive.embed-responsive-16by9.mt-2
+                      iframe.embed-responsive-item(pre-src=`https://www.youtube.com/embed/${fes.events[i].youtube_id}`, allowfullscreen)
+                  .dropdown-divider
+                  p.mb-1 #{printDate(this_startDate, 'time')} ～ #{printDate(this_endDate, 'time')} @#{eventsplace.title}
+                  +_urlshare_igroup(site.URL + "events?tab=" + key + "&collapse=event_collapse_" + key + "_" + fes.events[i].id, "【" + eventsplace.title + "】 " + fes.events[i].title, fes.events[i].description ,fes.events[i].description)
+      if (thereis == false)
+        p.bg-white.p-3: b ありません
+
+mixin _event_tabcontent(eventsplace, key)
+  h3= eventsplace.title
+  p!= eventsplace.description.replace(/\r?\n|\r/g,"<br>")
+  .row
+    .col-xl-6
+      +_event_tabcontent_ub(eventsplace, key, 1)
+    .col-xl-6
+      +_event_tabcontent_ub(eventsplace, key, 2)
+
+
+//-**********************************************
+  *      invmatch
+  *      招待試合
+  ***********************************************
+
+mixin _invmatch_tabcontent_ub(mmday)
+  .-tabemon-common-wrapper
+    div(role="tablist",aria-multiselectable="true",id=`accordion_${mmday}`)
+      each match, i in fes.invmatches
+        - var this_startDate = new Date(fes.invmatches[i].startDate)
+        -     this_endDate = new Date(fes.invmatches[i].endDate)
+        -     day_startDate = new Date(fes['Day' + mmday].startDate)
+        -     day_endDate = new Date(fes['Day' + mmday].endDate)
+          if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
+            div( id=`invmatch_${fes.invmatches[i].id}` ).invmatch
+              .card(class=`card-outline-success`).-tabemon-card
+                a.text-white(data-toggle="collapse", data-parent=`#accordion_${mmday}`, href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-controls=`#invmatch_collapse_${fes.invmatches[i].id}`)
+                  .card-header.bg-success(id=`accordion_${fes.invmatches[i].id}`,role="tab")
+                    h4.w-auto.p-0.m-0
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.invmatches[i].title}
+                    <span class="fw-500 ml-auto">vs.#{fes.invmatches[i].vs.convenient}</span>
+                .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`#accordion_${fes.invmatches[i].id}`): .card-block.bg-white
+                  p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')}
+                    br
+                    | <b>@</b>#{fes.invmatches[i].place.title}
+                    br
+                    | <b>vs.</b>#{fes.invmatches[i].vs.formal}
+                  p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
+                  .dropdown-divider
+                  +_urlshare_igroup(site.URL + "invmatch?collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
+
+mixin _invmatch_tabcontent(mmday)
+  h3.mt-3 #{mmday}日目
+  .pb-2
+    +_invmatch_tabcontent_ub(mmday)
+
+
+//-**********************************************
+  *      urlshare
+  *      共有
+  ***********************************************
+
+mixin _urlshare_igroup(url, title, twtext, litext)
+  - var titletext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  -     tweettext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  -     linetext  = litext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  - if(!url_all){
+  -     url_all=""  
+  - }
+  - url_all += url + "\n"
+  form
+    .input-group
+      span.input-group-addon シェア
+      input.form-control.-urlshare-inputurl(type="url",value=url, readonly)
+      .input-group-btn
+        button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+          +fa('share-alt')
+        .dropdown-menu.dropdown-menu-right
+          a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(titletext + "\n\n" + linetext + "\n\n" + url + "\n#翠巒祭")}`)
+            +ft('line')
+            | &thinsp;LINE it!
+          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&hashtags=翠巒祭&text=${encodeURIComponent(titletext+"\n"+tweettext)}&related=suiranfes`, target="_blank")
+            +fa('twitter')
+            | &thinsp;Tweet
